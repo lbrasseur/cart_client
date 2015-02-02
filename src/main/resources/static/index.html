@@ -36,6 +36,17 @@
 				}
 				);
 		}
+		function logout() {
+			get('service/logout',
+				function(data) {
+						if (data.ok) {
+							goToLogin();
+						} else {
+							alert("Error de logout");
+						}
+				}
+				);
+		}
 		function refreshCart() {
 			$('#cartList').empty();
 			get('service/cart', function(data) {
@@ -147,7 +158,7 @@
 			<input type='button' value='Refrescar' onclick="refreshCart();" />
 			<input type='button' value='Productos' onclick="goToProducts();" />
 			<input type='button' value='Checkout' onclick="checkout();" />
-			<input type='button' value='Logout' onclick="goToLogin();" />
+			<input type='button' value='Logout' onclick="logout();" />
 			<ul data-role="listview" id="cartList" style="margin-top: 10px"/>
 		</div>
 		<div data-role="footer">
