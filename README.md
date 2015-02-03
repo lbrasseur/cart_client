@@ -31,6 +31,18 @@ Más datos:
       "ok": true
     }
 
+### Logout
+**URL:** `GET services/logout`
+
+**Requerimiento:**
+Nada, no va ningún mensaje.
+
+**Respuesta:**
+
+    {
+      "ok": true
+    }
+
 ### Refrescar carrito
 
 **URL:** `GET services/cart`
